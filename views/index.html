@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <title>File Metadata</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="/public/style.css" rel="stylesheet" type="text/css">
-   </head>
 
-   <body>
-      <div class="container">
-        <h2>API Project: File Metadata Microservice</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicole's File Metadata</title>
+  <link rel="shortcut icon" href="../public/folder.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link href="/public/style.css" rel="stylesheet" type="text/css">
+</head>
 
-        <h3>Usage:</h3>
-        <p>
-          Please Upload a File ...
-        </p>
-        <div class="view">
-          <h4 id="output"></h4>
-          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
-            <input id="inputfield" type="file" name="upfile">
-            <input id="button" type="submit" value="Upload">
-          </form>
-        </div>
-      </div>
-      <div class="footer">
-        <p>
-          by 
-          <a href="http://www.freecodecamp.com">freeCodeCamp</a>
-        </p>
-      </div>
-   </body>
+<body>
+  <header>
+    <h1>Nicole's File Upload API</h1>
+  </header>
+  <main>
+    <h2>Usage:</h2>
+    <p>
+      Please upload a file ...
+    </p>
+    <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
+      <input type="file" name="upfile">
+      <input type="submit" value="Upload">
+    </form>
+  </main>
+  <footer>
+    <p>
+      👩‍💻 Built by
+      <a href="https://linktr.ee/nicolelancaster">Nicole Lancaster</a>
+    </p>
+  </footer>
+</body>
+
 </html>
