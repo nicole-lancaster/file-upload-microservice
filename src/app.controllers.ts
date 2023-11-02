@@ -12,14 +12,14 @@ export const postFormDataAndFile = (
   response: Express.Response,
 ) => {
   try {
-    const responseData = request.file;
-    const size = responseData?.size;
-    const type = responseData?.mimetype;
-    const name = responseData?.filename;
-    const responseJson = { size, type, name };
-
-    return response.json(responseJson);
+    const responseData = {
+      name: request.file?.originalname,
+      type: request.file?.mimetype,
+      size: request.file?.size,
+    };
+    return response.json(responseData);
   } catch (err) {
     console.error(err);
+    return response.status(500).json({ msg: "Server error" });
   }
 };
