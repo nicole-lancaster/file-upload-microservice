@@ -12,7 +12,8 @@ export const postFormDataAndFile = (
   response: Express.Response,
 ) => {
   try {
-    return response.json({ msg: "successfully posted form" });
+    const responseData = request.file;
+    return response.json(responseData);
   } catch (err) {
     console.error(err);
   }
