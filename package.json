@@ -4,17 +4,18 @@
   "description": "API project for freeCodeCamp",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node node index.ts",
+    "start": "ts-node index.ts",
     "format": "prettier -w ./src/*"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/freeCodeCamp/boilerplate-project-filemetadata"
+    "url": "https://github.com/nicole-lancaster/file-upload-service"
   },
   "keywords": [
     "node",
