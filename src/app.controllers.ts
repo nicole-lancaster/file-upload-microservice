@@ -13,7 +13,12 @@ export const postFormDataAndFile = (
 ) => {
   try {
     const responseData = request.file;
-    return response.json(responseData);
+    const size = responseData?.size;
+    const type = responseData?.mimetype;
+    const name = responseData?.filename;
+    const responseJson = { size, type, name };
+
+    return response.json(responseJson);
   } catch (err) {
     console.error(err);
   }
