@@ -1,7 +1,7 @@
 import Express from "express";
 
 export const getHtml = (
-  request: Express.Request,
+  _request: Express.Request,
   response: Express.Response,
 ) => {
   response.sendFile(process.cwd() + "/views/index.html");
@@ -11,12 +11,13 @@ export const postFormDataAndFile = (
   request: Express.Request,
   response: Express.Response,
 ) => {
+  const { originalname, mimetype, size } = request.file || {};
+  const responseData = {
+    name: originalname,
+    type: mimetype,
+    size: size,
+  };
   try {
-    const responseData = {
-      name: request.file?.originalname,
-      type: request.file?.mimetype,
-      size: request.file?.size,
-    };
     return response.json(responseData);
   } catch (err) {
     console.error(err);
